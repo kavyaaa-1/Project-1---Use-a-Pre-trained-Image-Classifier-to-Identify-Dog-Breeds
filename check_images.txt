@@ -14,8 +14,8 @@ Answer: Yes, each of the three model architectures classify the breed of dog in 
 
 Answer: Yes, the three model architectures correctly classify Animal_Name_01.jpg and Object_Name_01.jpg to not be dogs.
 
-			Duck_01.jpg was classifed as :
-			Resnet - giant panda, panda, panda bear, coon bear, ailuropoda
+	    Duck_01.jpg was classifed as :
+	    Resnet - giant panda, panda, panda bear, coon bear, ailuropoda
             Alexnet - hamster
             Vgg - black-footed ferret, ferret, mustela nigripes
             
