@@ -43,27 +43,29 @@ def get_pet_labels(image_dir):
     files = listdir(image_dir)
     results = dict()
     
-    for idx in range(0, len(files)):
-        
-        pet_image = files[idx]
-        #print(pet_image)
-        low_pet_image = pet_image.lower()
+    for idx in range(len(files)):
 
-        word_list_pet_image = low_pet_image.split("_")
-
-        pet_name = ""
-
-        for word in word_list_pet_image:
-            if word.isalpha():
-                pet_name += word + " "
-
-        pet_name = pet_name.strip()
-        
-        if files[idx] not in results:
-              results[files[idx]] = [pet_name]
-              
-        else:
-            print("** Warning: Duplicate files exist in directory:", files[idx])
+        #ignore files that start with .
+        if(files[idx][0] != '.'):
+            pet_image = files[idx]
+            #print(pet_image)
+            low_pet_image = pet_image.lower()
+    
+            word_list_pet_image = low_pet_image.split("_")
+    
+            pet_name = ""
+    
+            for word in word_list_pet_image:
+                if word.isalpha():
+                    pet_name += word + " "
+    
+            pet_name = pet_name.strip()
+            
+            if files[idx] not in results:
+                  results[files[idx]] = [pet_name]
+                  
+            else:
+                print("** Warning: Duplicate files exist in directory:", files[idx])
             
     # Replace None with the results_dic dictionary that you created with this
     # function
