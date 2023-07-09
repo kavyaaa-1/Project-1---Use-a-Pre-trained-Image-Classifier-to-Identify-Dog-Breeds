@@ -81,7 +81,7 @@ def classify_images(images_dir, results_dic, model):
     for key in results_dic:
         
         model_label = ""
-        classified = classifier(images_dir+key,model)
+        classified = classifier(os.path.join(images_dir, key),model)
         lower_pet_image = classified.lower()
         lower_pet_image = lower_pet_image.strip()
         model_label = lower_pet_image
