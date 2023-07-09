@@ -121,7 +121,7 @@ def main():
     # TODO 0: Computes overall runtime in seconds & prints it in hh:mm:ss format
     tot_time = end_time - start_time #calculate difference between end time and start time
     print("\n** Total Elapsed Runtime:",
-          str(int((tot_time/3600)))+":"+str(int((tot_time%3600)/60))+":"
+          str(int((tot_time/3600))) + ":"+str(int((tot_time%3600)/60)) + ":"
           +str(int((tot_time%3600)%60)) )
     
 
